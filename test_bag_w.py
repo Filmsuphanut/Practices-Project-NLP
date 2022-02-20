@@ -17,12 +17,12 @@ cvec = CountVectorizer(analyzer=lambda x:x.split(','))
 c_feat = cvec.fit_transform(data1)
 
 
-print(cvec.vocabulary_) #ดูคำ
-print(c_feat)
+# print(cvec.vocabulary_) #ดูคำ
+# print(c_feat)
 #print(c_feat.todense()) #เทียบกัน 0 - 20
 
-# tvec = TfidfVectorizer(analyzer=lambda x:x.split(','),)
-# t_feat = tvec.fit_transform(tokens_list_j)
+tvec = TfidfVectorizer(analyzer=lambda x:x.split(','),)
+t_feat = tvec.fit_transform(data1)
 
-# print(t_feat) #ดูคำ
-# print(t_feat[:,:5].todense())
+print(t_feat) #ดูคำ
+print(t_feat.todense())
